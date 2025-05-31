@@ -1,0 +1,203 @@
+/* General Styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+
+/* Gradient Background */
+
+
+.bg-gradient {
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    min-height: 100vh;
+}
+
+/* Neumorphic Design */
+.neumorphic {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.neumorphic:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px;
+    background: linear-gradient(180deg, #1a1a1a, #2c2c2c);
+    transition: all 0.3s ease;
+}
+.sidebar .nav-link {
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.sidebar .nav-link:hover {
+    background-color: #007BFF;
+    transform: translateX(10px);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
+}
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-hover:hover {
+    animation: pulseHover 1s infinite;
+}
+@keyframes pulseHover {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.bounce {
+    transition: transform 0.3s ease;
+}
+.bounce:hover {
+    transform: scale(1.1);
+}
+
+.rotate-hover:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styling */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.table th {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+}
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Iframe Styling */
+iframe {
+    width: 250px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #007BFF, #00c4ff);
+    border: none;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #0099cc);
+}
+.btn-danger {
+    background: linear-gradient(90deg, #DC3545, #ff7582);
+    border: none;
+}
+.btn-danger:hover {
+    background: linear-gradient(90deg, #b02a37, #d94c5b);
+}
+.btn-warning {
+    background: linear-gradient(90deg, #FFC107, #ffd740);
+    border: none;
+    color: #212529;
+}
+.btn-warning:hover {
+    background: linear-gradient(90deg, #e0a800, #ffcc00);
+}
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #212529;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .col-md-9 {
+        margin-left: 0;
+        width: 100%;
+    }
+    iframe {
+        width: 100%;
+        height: 120px;
+    }
+}

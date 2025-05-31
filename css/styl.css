@@ -1,0 +1,165 @@
+/* Admin Dashboard Specific Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff; /* Changed to white */
+    color: #333333; /* Dark text for better contrast on white */
+    min-height: 100vh;
+}
+
+/* Sidebar Styles - Kept dark */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px;
+    background: linear-gradient(180deg, #1a1a1a, #2c2c2c);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sidebar h4 {
+    color: #ffffff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar .nav-link:hover {
+    background-color: #007BFF;
+    transform: translateX(10px);
+    color: white;
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Main Content Area - White background */
+main {
+    margin-left: 250px;
+    padding-top: 20px;
+    transition: margin-left 0.3s ease;
+    background-color: #ffffff; /* Ensured white background */
+    min-height: 100vh;
+}
+
+/* Dashboard Cards - Adjusted for white background */
+.card.neumorphic {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), 
+                -8px -8px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card.neumorphic:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15), 
+                -10px -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card.neumorphic .card-body {
+    padding: 20px;
+    color: #333;
+}
+
+.card.neumorphic h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #007BFF; /* Added color for better visibility */
+}
+
+.card.neumorphic p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.card.neumorphic i {
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+/* Header in main content */
+main h1, main h2, main h3, main h4 {
+    color: #333333; /* Dark color for headings */
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    main {
+        margin-left: 0;
+    }
+    
+    .btn-outline-light {
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+/* Button Styles */
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
